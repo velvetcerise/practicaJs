@@ -1,25 +1,33 @@
-var saludo = "Hola, mi nombre es";
-var nombre = "Angie";
-var edad = 29;
 
-var fecha = 1991;
-var edad = 2020 - fecha;
-
-var mensaje = saludo + " " + nombre + " y tengo " + edad + " años";
-
-// Imprimir en consola
-console.log(mensaje);
-console.log(nombre + ", tienes " + edad + " años");
+function recogeDatos(e) {
+  // prevenir evento del formulario (enviar)
+  e.preventDefault();
 
 
-// Selector querySelector 
-// Método .value (imprimimos valor)
-var getName = document.querySelector('#nombre').value;
+  var nombre = document.querySelector('#nombre').value;
+  var fecha = document.querySelector('#fecha').value;
+  var edad = 2020 - fecha;
+  
+  console.log('Hola, ' + nombre + ", tienes " + edad + " años");
+}
 
-var getDate = document.querySelector('#fecha').value;
+// Prueba eventListener
+// function saludar() {
+//   console.log('hola');
+// }
 
-console.log(getName);
-console.log(getDate);
+var miForm = document.querySelector('#formulario');
 
+// selecciona elemento al que quieres vincular el evento
+// miForm.addEventListener("click", saludar); // ejemplo
+/* addEventListener acepta dos parámetros ("evento"(click), funcion) */
+
+miForm.addEventListener('submit', recogeDatos);
+
+
+// También se puede utilizar una función anónima en este ejercicio
+miForm.addEventListener("click", function) {
+  console.log('Prueba');
+}
 
 
