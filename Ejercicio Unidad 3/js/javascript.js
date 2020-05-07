@@ -8,8 +8,30 @@ function recogeDatos(e) {
   var fecha = document.querySelector('#fecha').value;
   var edad = 2020 - fecha;
   var bienvenida = document.querySelector('#bienvenida');
-  var mensaje = 'Hola, ' + nombre + ', tienes ' + edad + ' años';
-  bienvenida.textContent = mensaje;
+  var mensajeEdad;
+  var mensaje;
+
+
+  if (edad > 30) {
+    mensajeEdad = 'abuelo';
+  } else if (edad < 30) {
+    mensajeEdad = 'jovenzuelo!';
+  } else {
+    mensajeEdad = '¡no me lo creo!';
+  }
+
+  var mensaje = 
+          '<p>Hola, ' + 
+          nombre + 
+          ', tienes ' + 
+          edad +
+          ' años, ' +
+          mensajeEdad +
+          '</p>';
+
+  // bienvenida.textContent = mensaje;
+
+  bienvenida.innerHTML = mensaje;
 }
 
 var miForm = document.querySelector('#formulario');
