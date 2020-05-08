@@ -1,40 +1,28 @@
 
-var grupoTarjetas1 = ["🦄", "🍦", "🌈", "👽", "👾", "🤖", "👹", "👺"];
-var grupoTarjetas2 = ["😻", "🧠", "👀", "🧐", "🥩", "🍉", "🥑", "🥗"];
-var grupoTarjetas3 = ["🤡", "💩", "🎃", "🙀", "☠️", "👾", "😽", "😼"];
-
-var totalTarjetasPrueba = grupoTarjetas1 + grupoTarjetas2 + grupoTarjetas3;
-
-var totalTarjetas = grupoTarjetas1.concat(grupoTarjetas2, grupoTarjetas3);
+var grupoTarjetas = ["🦄", "🍦", "🌈", "👽", "👾", "🤖", "👹", "👺"];
 
 
 
 
+function reparteTarjetas () {
 
-// Se imprimen los valores de los arrays como string en la consola 
-console.log(totalTarjetasPrueba);
+  var mesa = document.querySelector('#mesa');
 
-
-// Utiliza método concat para crear un nuevo array
-// Se imprime un array en la consola
-console.log(totalTarjetas);
-
-// Total de elementos en el array
-console.log(totalTarjetas.length);
+  mesa.innerHTML = '';
 
 
-// Se agrega un nuevo elemento al array
-var nuevoTotalTarjetas = totalTarjetas.push("test");
-console.log(nuevoTotalTarjetas);
 
-var arrayAnidado = [
-  ["🦄", "🍦", "🌈", "👽", "👾", "🤖", "👹", "👺"],
-  ["😻", "🧠", "👀", "🧐", "🥩", "🍉", "🥑", "🥗"],
-  ["🤡", "💩", "🎃", "🙀", "☠️", "👾", "😽", "😼"]
-];
+  // Llama a loop dentro de la función  reparteTarjetas()
+  grupoTarjetas.forEach(function(item) {
+    // indice imprime la posición del item dentro del array
+    console.log(item);
 
-console.log(arrayAnidado);
-console.log(arrayAnidado[2]);
-console.log(arrayAnidado[1][0]);
+    // Declara elemento que será creado en el nodo
+    var tarjeta = document.createElement('div');
+    tarjeta.innerHTML = item;
+    mesa.appendChild(tarjeta)
+  }
+);
+}
 
-
+reparteTarjetas();
