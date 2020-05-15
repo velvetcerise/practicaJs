@@ -46,3 +46,26 @@ document.querySelectorAll(".tarjeta").forEach(function(elemento) {
   // Agrega clase al momento de pasar evento click en cada nodo
   elemento.addEventListener("click", descubrir);
 });
+
+
+// Repaso de objetos
+
+var miGato = {
+  nombre: "Quinto",
+  color: "naranja",
+  edad: 10,
+  bienEducado: false,
+
+  // Funciones dentro de un objeto
+  // Un método es una función propia o interna de un objeto
+  maullar: function () {
+    console.log('🐈 miauu!')
+  }
+};
+
+// imprimir valor
+  // miGato.nombre
+  // miGato.color
+  // miGato.edad
+  // miGato.bienEducado
+
