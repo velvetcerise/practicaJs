@@ -5,6 +5,22 @@ var grupoTarjetas = ["🦄", "🍦", "🌈", "👽", "👾", "🤖", "👹", "�
 var totalTarjetas = grupoTarjetas.concat(grupoTarjetas);
 
 
+// Función Math.random
+function barajaTarjetas() {
+  var resultado;
+
+  // 1.- Se agrega a la variable resultado el método Math.random
+  // 2.- Se múltiplica por 10 el método Math.random para que la "variable resultado" nos proporcione un número entero
+  // 3.- Se agrega método floor que redondeara el método Math.random
+  resultado = Math.floor(Math.random()* 10) + 1;
+  
+  // El método sort() ordena los elementos de unarreglo (array) localmente 
+  // y devuelve el arreglo ordenado.
+
+  console.log(resultado);
+}
+
+
 function reparteTarjetas () {
 
   // Seleccionamos el elemento donde vamos a pintar el array
